@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01.01</title>
+	<script type="text/javascript">
+
+		var x1 = prompt('Enter X-coordinate of first point', '');
+        var y1 = prompt('Enter Y-coordinate of first point', '');
+        var x2 = prompt('Enter X-coordinate of second point', '');
+        var y2 = prompt('Enter Y-coordinate of second point', '');
+
+        var k = (+y1 - +y2) / (+x1 - +x2);
+        var b = +y2 - k * +x2;
+        var equation = 'y = ' + k + 'x + ' + b;
+
+        document.write(equation);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
