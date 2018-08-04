@@ -11,75 +11,88 @@
         //    Функция должна проверять корректность введенных чисел и знака операции.
         //    Все аргументы для функции принять от пользователя.
 
-        // var firstNumber = prompt('Enter first number', '');
-        // var secondNumber = prompt('Enter second number', '');
-        // var operand = prompt('Enter operand', '');
-        //
-        // document.write(firstNumber + operand + secondNumber + ' = ' + calculate(firstNumber, secondNumber, operand));
-        //
-        //
-        // function calculate(firstOperand, secondOperand, operator) {
-        //
-        //     var operators = ['+', '-', '*', '/', '%'];
-        //
-        //     if (isNaN(firstOperand) || firstOperand === '' || isNaN(secondOperand) || secondOperand === '' ||
-        //         !operators.includes(operator) || arguments.length !== 3) {
-        //
-        //         return 'Not correct input';
-        //     }
-        //
-        //     firstOperand = +firstOperand;
-        //     secondOperand = + secondOperand;
-        //
-        //     switch (operator) {
-        //         case '+':
-        //             return firstOperand + secondOperand;
-        //         case '-':
-        //             return firstOperand - secondOperand;
-        //         case '*':
-        //             return firstOperand * secondOperand;
-        //         case '/':
-        //             return firstOperand / secondOperand;
-        //         case '%':
-        //             return firstOperand % secondOperand;
-        //     }
-        // }
-        //
-        // document.write('<br>');
-        // document.write('====================================================<br>');
+        var firstNumber = prompt('Enter first number', '');
+        var secondNumber = prompt('Enter second number', '');
+        var operand = prompt('Enter operand', '');
+
+        document.write(firstNumber + operand + secondNumber + ' = ' + calculate(firstNumber, secondNumber, operand));
+
+        /**
+         *
+         * @param firstOperand
+         * @param secondOperand
+         * @param operator
+         * @returns {*}
+         */
+        function calculate(firstOperand, secondOperand, operator) {
+
+            var operators = ['+', '-', '*', '/', '%'];
+
+            if (isNaN(firstOperand) || firstOperand === '' || isNaN(secondOperand) || secondOperand === '' ||
+                !operators.includes(operator) || arguments.length !== 3) {
+
+                return 'Not correct input';
+            }
+
+            firstOperand = +firstOperand;
+            secondOperand = + secondOperand;
+
+            switch (operator) {
+                case '+':
+                    return firstOperand + secondOperand;
+                case '-':
+                    return firstOperand - secondOperand;
+                case '*':
+                    return firstOperand * secondOperand;
+                case '/':
+                    return firstOperand / secondOperand;
+                case '%':
+                    return firstOperand % secondOperand;
+            }
+        }
+
+        document.write('<br>');
+        document.write('====================================================<br>');
     </script>
 
     <script type="text/javascript">
         // 2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем
 
-        // var number = prompt('Enter number', '');
-        // var power = prompt('Enter power', '');
-        //
-        // function pow(number, power) {
-        //
-        //     if (isNaN(number) || number === '' || isNaN(power) || power === '' ||
-        //         arguments.length !== 2) {
-        //
-        //         return 'Not correct input';
-        //     }
-        //
-        //     if (power === 0) {
-        //         return 1;
-        //     }
-        //     if (power === 1) {
-        //         return number;
-        //     }
-        //     if (power === 2) {
-        //         return number * number;
-        //     }
-        //
-        //     return number * pow(number, power - 1);
-        // }
-        //
-        // document.write(pow(number, power));
-        //
-        // document.write('<br>');
-        // document.write('====================================================<br>');
+        var number, power;
+
+        while (isNaN(number) || number == '' || number === null ) {
+            number = prompt('Enter number');
+        }
+
+        while (isNaN(power) || power == '' || power === null ) {
+            power = prompt('Enter power');
+        }
+
+        /**
+         *
+         * @param number
+         * @param power
+         * @returns {*}
+         */
+        function pow(number, power) {
+
+            if (power === 0) {
+                return 1;
+            }
+            if (power === 1) {
+                return number;
+            }
+            if (power === 2) {
+                return number * number;
+            }
+
+            return number * pow(number, power - 1);
+        }
+
+        document.write(number + '<sup>' + power + '</sup>' + ' = ' + pow(number, power));
+
+        document.write('<br>');
+        document.write('====================================================<br>');
     </script>
 
     <script type="text/javascript">
@@ -90,23 +103,30 @@
         //     Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить
         //     принцип выбора решения компьютера.
 
-        // var weapon = [
-        //     'Камень',
-        //     'Ножницы',
-        //     'Бумага',
-        //     'Колодец'
-        // ];
-        //
-        // var computerChoise = weapon[Math.floor(Math.random() * 4)];
-        // alert(computerChoise);
-        //
-        // document.write('<br>');
-        // document.write('====================================================<br>');
+        var weapon = [
+            'Камень',
+            'Ножницы',
+            'Бумага',
+            'Колодец'
+        ];
+
+        var computerChoise = weapon[Math.floor(Math.random() * 4)];
+        // alert('Выбор компьютера: ' + computerChoise);
+
+        document.write('Выбор компьютера: ' + computerChoise);
+
+        document.write('<br>');
+        document.write('====================================================<br>');
     </script>
 
     <script type="text/javascript">
         // 4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
 
+        /**
+         *
+         * @param n
+         * @returns {number}
+         */
         function fibonacci(n) {
 
             var first = 0;
@@ -131,11 +151,12 @@
             return first;
         }
 
-        while (!(+number > 0)) {
-            var number = prompt('Enter number', '');
+        var index = 0;
+        while (!(+index > 0)) {
+            index = prompt('Enter number', '');
         }
 
-        document.write(fibonacci(+number));
+        document.write(index + '-й элемент последовательности Фибоначчи: ' + fibonacci(index));
 
     </script>
 </body>
