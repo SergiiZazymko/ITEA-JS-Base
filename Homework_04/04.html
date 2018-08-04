@@ -31,7 +31,7 @@
             if (isNaN(firstOperand) || firstOperand === '' || isNaN(secondOperand) || secondOperand === '' ||
                 !operators.includes(operator) || arguments.length !== 3) {
 
-                return 'Not correct input';
+                return false;
             }
 
             firstOperand = +firstOperand;
@@ -60,13 +60,16 @@
 
         var number, power;
 
-        while (isNaN(number) || number == '' || number === null ) {
+        while (isNaN(number) || number === '' || number === null ) {
             number = prompt('Enter number');
         }
 
-        while (isNaN(power) || power == '' || power === null ) {
+        while (isNaN(power) || power === '' || power === null ) {
             power = prompt('Enter power');
         }
+
+        number = +number;
+        power = +power;
 
         /**
          *
