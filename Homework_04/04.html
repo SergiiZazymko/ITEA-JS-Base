@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>js_base_04</title>
+    <style>
+        form {
+            margin: auto;
+            width: 300px;
+            align-content: center;
+            justify-content: center;
+        }
+        input {
+            margin: auto;
+        }
+        input[type="submit"] {
+            color: red;
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        h3 {
+            margin: auto;
+            width: 300px;
+            margin-top: 20px;
+        }
+        h1 {
+            margin: auto;
+            width: 300px;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
 </head>
 <body>
+
+    <form action="" method="get" class="form" id="BookPackageForm">
+        <p>Сделайте свой выбор:</p>
+        <input type="radio" name="userChoise" class="radio" value="Камень" checked>Камень<br>
+        <input type="radio" name="userChoise" class="radio" value="Ножницы">Ножницы<br>
+        <input type="radio" name="userChoise" class="radio" value="Бумага">Бумага<br>
+        <input type="radio" name="userChoise" class="radio" value="Колодец">Колодец<br>
+        <input type="submit" id="submit" value="Играть!">
+    </form>
+
+
     <script type="text/javascript">
         // 1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
         //    Функция должна расчитывать результат операции, исходя из переданного ей знака.
@@ -114,12 +154,76 @@
         ];
 
         var computerChoise = weapon[Math.floor(Math.random() * 4)];
-        // alert('Выбор компьютера: ' + computerChoise);
 
-        document.write('Выбор компьютера: ' + computerChoise);
+        var query = window.location.search.substring(1);
+
+        if (query) {
+            var userChoise = query.split('=')[1];
+            userChoise = decodeURIComponent(userChoise);
+            console.log(userChoise);
+
+            document.write('<h3>' + 'Выбор компьютера: ' + computerChoise + '</h3>');
+            document.write('<h3>' + 'Ваш выбор: ' + userChoise + '</h3>');
+            document.write('<h1>' + win(computerChoise, userChoise) + '</h1>');
+        }
+
+        /**
+         *
+         * @param computerChoise
+         * @param userChoise
+         * @returns {string}
+         */
+        function win(computerChoise, userChoise) {
+            switch (computerChoise) {
+                case 'Камень':
+                    switch (userChoise) {
+                        case 'Камень':
+                            return 'Ничья';
+                        case 'Ножницы':
+                            return 'Вы проиграли';
+                        case 'Бумага':
+                            return 'Вы проиграли';
+                        case 'Колодец':
+                            return 'Вы победили';
+                    }
+                case 'Ножницы':
+                    switch (userChoise) {
+                        case 'Камень':
+                            return 'Вы победили';
+                        case 'Ножницы':
+                            return 'Ничья';
+                        case 'Бумага':
+                            return 'Вы проиграли';
+                        case 'Колодец':
+                            return 'Вы победили';
+                    }
+                case 'Бумага':
+                    switch (userChoise) {
+                        case 'Камень':
+                            return 'Вы победили';
+                        case 'Ножницы':
+                            return 'Вы победили';
+                        case 'Бумага':
+                            return 'Ничья';
+                        case 'Колодец':
+                            return 'Вы проиграли';
+                    }
+                case 'Колодец':
+                    switch (userChoise) {
+                        case 'Камень':
+                            return 'Вы проиграли';
+                        case 'Ножницы':
+                            return 'Вы проиграли';
+                        case 'Бумага':
+                            return 'Вы победили';
+                        case 'Колодец':
+                            return 'Ничья';
+                    }
+            }
+        }
 
         document.write('<br>');
-        document.write('====================================================<br>');
+        // document.write('====================================================<br>');
     </script>
 
     <script type="text/javascript">
