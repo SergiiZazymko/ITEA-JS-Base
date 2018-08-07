@@ -5,74 +5,74 @@
     <title>js_base_03</title>
 </head>
 <body>
-    <!--<script type="text/javascript">-->
-        <!--//1. Сделать собственные примеры методов применяемых для массивов.-->
+    <script type="text/javascript">
+        //1. Сделать собственные примеры методов применяемых для массивов.
 
-        <!--/**-->
-         <!--*-->
-         <!--* @param len-->
-         <!--* @param maxNumber-->
-         <!--* @returns {Array}-->
-         <!--*/-->
-        <!--function makeRandomArray(len, maxNumber) {-->
-            <!--array = [];-->
-            <!--while (len&#45;&#45;) {-->
-                <!--array.push(Math.round(Math.random() * maxNumber));-->
-            <!--}-->
-            <!--return array;-->
-        <!--}-->
+        /**
+         *
+         * @param len
+         * @param maxNumber
+         * @returns {Array}
+         */
+        function makeRandomArray(len, maxNumber) {
+            array = [];
+            while (len--) {
+                array.push(Math.round(Math.random() * maxNumber));
+            }
+            return array;
+        }
 
-        <!--var firstArray = makeRandomArray(10, 10000);-->
-        <!--var secondArray = [];-->
+        var firstArray = makeRandomArray(10, 10000);
+        var secondArray = [];
 
-        <!--console.log(firstArray);-->
-        <!--console.log(secondArray);-->
-        <!--console.log('********************************************');-->
+        console.log(firstArray);
+        console.log(secondArray);
+        console.log('********************************************');
 
-        <!--while (firstArray.length) {-->
-            <!--secondArray.unshift(firstArray.pop());-->
-        <!--}-->
+        while (firstArray.length) {
+            secondArray.unshift(firstArray.pop());
+        }
 
-        <!--console.log(firstArray);-->
-        <!--console.log(secondArray);-->
-        <!--console.log('********************************************');-->
+        console.log(firstArray);
+        console.log(secondArray);
+        console.log('********************************************');
 
-        <!--var smallArray = secondArray.slice(3, 8);-->
-        <!--console.log(smallArray);-->
-        <!--console.log('********************************************');-->
+        var smallArray = secondArray.slice(3, 8);
+        console.log(smallArray);
+        console.log('********************************************');
 
-        <!--console.log(secondArray.reverse());-->
-        <!--console.log('********************************************');-->
+        console.log(secondArray.reverse());
+        console.log('********************************************');
 
-        <!--console.log(secondArray.sort(function(a, b) {-->
-            <!--return a - b;-->
-        <!--}));-->
-        <!--console.log('********************************************');-->
+        console.log(secondArray.sort(function(a, b) {
+            return a - b;
+        }));
+        console.log('********************************************');
 
-        <!--var helloArray = new Array('Hello');-->
-        <!--console.log(helloArray);-->
-        <!--console.log(helloArray.length);-->
-        <!--console.log('********************************************');-->
+        var helloArray = new Array('Hello');
+        console.log(helloArray);
+        console.log(helloArray.length);
+        console.log('********************************************');
 
-        <!--helloArray.length = 2;-->
-        <!--console.log(helloArray);-->
-        <!--console.log('********************************************');-->
+        helloArray.length = 2;
+        console.log(helloArray);
+        console.log('********************************************');
 
-        <!--helloArray.splice(1, 1, 'world');-->
-        <!--console.log(helloArray);-->
-        <!--console.log('********************************************');-->
+        helloArray.splice(1, 1, 'world');
+        console.log(helloArray);
+        console.log('********************************************');
 
-        <!--var string = helloArray.join(', ');-->
-        <!--console.log(string);-->
-        <!--console.log('********************************************');-->
+        var string = helloArray.join(', ');
+        console.log(string);
+        console.log('********************************************');
 
-        <!--var newHelloArray = string.split(', ');-->
-        <!--console.log(newHelloArray);-->
-        <!--console.log('********************************************');-->
+        var newHelloArray = string.split(', ');
+        console.log(newHelloArray);
+        console.log('********************************************');
 
-        <!--console.log(['hello'].concat(['world'], ['!']));-->
-        <!--console.log('********************************************');-->
-    <!--</script>-->
+        console.log(['hello'].concat(['world'], ['!']));
+        console.log('********************************************');
+    </script>
 
     <script type="text/javascript">
         // 2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
@@ -119,165 +119,165 @@
 
     </script>
 
-    <!--<script type="text/javascript">-->
-        <!--// 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе.-->
-        <!--// Предел вводит пользователь.-->
+    <script type="text/javascript">
+        // 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе.
+        // Предел вводит пользователь.
 
-        <!--var start = ''; finish = '';-->
+        var start = ''; finish = '';
 
-        <!--let array = [-->
-            <!--23,-->
-            <!--12,-->
-            <!--54,-->
-            <!--'Hello',-->
-            <!--'world',-->
-            <!--true,-->
-            <!--false,-->
-            <!--[1, 2, 3],-->
-            <!--18000,-->
-            <!--NaN,-->
-            <!--null,-->
-        <!--];-->
+        let array = [
+            23,
+            12,
+            54,
+            'Hello',
+            'world',
+            true,
+            false,
+            [1, 2, 3],
+            18000,
+            NaN,
+            null,
+        ];
 
-        <!--while (isNaN(start) || start == '' || start === null ) {-->
-            <!--start = prompt('Enter start');-->
-        <!--}-->
-        <!--while (isNaN(finish) || finish == '' || finish == null) {-->
-            <!--finish = prompt('Enter finish');-->
-        <!--}-->
+        while (isNaN(start) || start == '' || start === null ) {
+            start = prompt('Enter start');
+        }
+        while (isNaN(finish) || finish == '' || finish == null) {
+            finish = prompt('Enter finish');
+        }
 
-        <!--slicedArray = array.slice(start, finish);-->
+        slicedArray = array.slice(start, finish);
 
-        <!--for (var i = 0, lenght = slicedArray.length; i < lenght; i += 1) {-->
-            <!--document.write(slicedArray[i] + '<br>');-->
-        <!--}-->
+        for (var i = 0, lenght = slicedArray.length; i < lenght; i += 1) {
+            document.write(slicedArray[i] + '<br>');
+        }
 
-        <!--document.write('====================================================<br>');-->
+        document.write('====================================================<br>');
 
-    <!--</script>-->
+    </script>
 
-    <!--<script type="text/javascript">-->
-        <!--// 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя.-->
-        <!--// Сортировка осушествляется методом sort().-->
+    <script type="text/javascript">
+        // 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя.
+        // Сортировка осушествляется методом sort().
 
-        <!--let sortArray = [];-->
+        let sortArray = [];
 
-        <!--while (sortArray.length < 10) {-->
-            <!--var elem = '';-->
-            <!--while (isNaN(elem) || elem === '' || elem === null) {-->
-                <!--elem = prompt('Enter number for array sort');-->
-            <!--}-->
-            <!--sortArray.push(elem);-->
-        <!--}-->
-        <!--document.write(sortArray.sort(function (a, b) {-->
-            <!--return a - b;-->
-        <!--}).toString());-->
+        while (sortArray.length < 10) {
+            var elem = '';
+            while (isNaN(elem) || elem === '' || elem === null) {
+                elem = prompt('Enter number for array sort');
+            }
+            sortArray.push(elem);
+        }
+        document.write(sortArray.sort(function (a, b) {
+            return a - b;
+        }).toString());
 
-        <!--document.write('<br>');-->
-        <!--document.write('====================================================<br>');-->
-    <!--</script>-->
+        document.write('<br>');
+        document.write('====================================================<br>');
+    </script>
 
-    <!--<script type="text/javascript">-->
-        <!--// 5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет-->
-        <!--// пользователь.-->
+    <script type="text/javascript">
+        // 5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет
+        // пользователь.
 
-        <!--var value = '', index;-->
+        var value = '', index;
 
-        <!--var insertArray = [-->
-            <!--23,-->
-            <!--12,-->
-            <!--54,-->
-            <!--'Hello',-->
-            <!--'world',-->
-            <!--18000,-->
-            <!--45,-->
-            <!--67,-->
-            <!--89-->
-        <!--];-->
+        var insertArray = [
+            23,
+            12,
+            54,
+            'Hello',
+            'world',
+            18000,
+            45,
+            67,
+            89
+        ];
 
-        <!--while (value == '' || value === null ) {-->
-            <!--value = prompt('Enter value');-->
-        <!--}-->
+        while (value == '' || value === null ) {
+            value = prompt('Enter value');
+        }
 
-        <!--console.log(value);-->
-        <!--index = insertArray.indexOf(value);-->
-        <!--console.log(index);-->
+        console.log(value);
+        index = insertArray.indexOf(value);
+        console.log(index);
 
-        <!--if (index === -1) {-->
-            <!--index = insertArray.indexOf(+value);-->
-        <!--}-->
+        if (index === -1) {
+            index = insertArray.indexOf(+value);
+        }
 
-        <!--if (index !== -1) {-->
-            <!--insertArray.splice(index + 1, 0, "NEW ELEMENT");-->
-        <!--}-->
+        if (index !== -1) {
+            insertArray.splice(index + 1, 0, "NEW ELEMENT");
+        }
 
-        <!--document.write(insertArray.toString());-->
+        document.write(insertArray.toString());
 
-        <!--document.write('<br>');-->
-        <!--document.write('====================================================<br>');-->
-    <!--</script>-->
+        document.write('<br>');
+        document.write('====================================================<br>');
+    </script>
 
-    <!--<script type="text/javascript">-->
-        <!--// 6. Необходимо получить предпоследний элемент из массива month и вывести его на экран.-->
-        <!--//     var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь",-->
-        <!--// "Октябрь", "Ноябрь", "Декабрь"]-->
+    <script type="text/javascript">
+        // 6. Необходимо получить предпоследний элемент из массива month и вывести его на экран.
+        //     var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь",
+        // "Октябрь", "Ноябрь", "Декабрь"]
 
-        <!--var month = [-->
-            <!--"Январь",-->
-            <!--"Февраль",-->
-            <!--"Март",-->
-            <!--"Апрель",-->
-            <!--"Май",-->
-            <!--"Июнь",-->
-            <!--"Июль",-->
-            <!--"Август",-->
-            <!--"Сентябрь",-->
-            <!--"Октябрь",-->
-            <!--"Ноябрь",-->
-            <!--"Декабрь"-->
-        <!--];-->
+        var month = [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+        ];
 
-        <!--document.write(month[month.length-2]);-->
+        document.write(month[month.length-2]);
 
-        <!--document.write('<br>');-->
-        <!--document.write('====================================================<br>');-->
-    <!--</script>-->
+        document.write('<br>');
+        document.write('====================================================<br>');
+    </script>
 
-    <!--<script type="text/javascript">-->
-        <!--// 7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города,-->
-        <!--// во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные-->
-        <!--// из двух массивов и вывести их в одну строку.-->
+    <script type="text/javascript">
+        // 7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города,
+        // во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные
+        // из двух массивов и вывести их в одну строку.
 
-        <!--var firstArray = [-->
-            <!--'Dynamo Kyiv',-->
-            <!--'Ferrari',-->
-            <!--'Mercedes',-->
-            <!--'Honda',-->
-            <!--'Kyiv',-->
-            <!--'Odesa',-->
-            <!--'Kharkiv'-->
-        <!--];-->
+        var firstArray = [
+            'Dynamo Kyiv',
+            'Ferrari',
+            'Mercedes',
+            'Honda',
+            'Kyiv',
+            'Odesa',
+            'Kharkiv'
+        ];
 
-        <!--var secondArray = [-->
-            <!--22,-->
-            <!--6.0,-->
-            <!--5.0,-->
-            <!--4.3,-->
-            <!--5000000,-->
-            <!--4000000,-->
-            <!--4500000,-->
-        <!--];-->
+        var secondArray = [
+            22,
+            6.0,
+            5.0,
+            4.3,
+            5000000,
+            4000000,
+            4500000,
+        ];
 
-        <!--var resultArray = [];-->
+        var resultArray = [];
 
-        <!--for (var i = 0, len = firstArray.length; i < len; i += 1) {-->
-            <!--resultArray.push(firstArray[i] + ' => ' + secondArray[i]);-->
-        <!--}-->
+        for (var i = 0, len = firstArray.length; i < len; i += 1) {
+            resultArray.push(firstArray[i] + ' => ' + secondArray[i]);
+        }
 
-        <!--document.write(resultArray.join(', '));-->
+        document.write(resultArray.join(', '));
 
-        <!--document.write('<br>');-->
-        <!--document.write('====================================================<br>');-->
-    <!--</script>-->
-<!--</body>-->
-<!--</html>-->
+        document.write('<br>');
+        document.write('====================================================<br>');
+    </script>
+</body>
+</html>
