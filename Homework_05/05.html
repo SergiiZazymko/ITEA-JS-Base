@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_base_05</title>
+</head>
+<body>
+    <!--1-->
+
+    <!--<form action="">-->
+        <!--<button type="button" onclick="addPicture()">Show cat</button>-->
+    <!--</form>-->
+    <!--<p id="par"></p>-->
+
+    <!--2-->
+
+    <!--<form action="">-->
+        <!--<input type="text" name="firstInput">-->
+        <!--<input type="text" name="secondInput">-->
+        <!--<button type="button" onclick="putText(this.form);">Goooo!</button>-->
+    <!--</form>-->
+
+    <!--<p></p>-->
+    <!--<p></p>-->
+
+    <!--3-->
+
+    <!--<h2>Заголовок, не поменяется.</h2>-->
+    <!--<p>Абзац, поменяется.</p>-->
+    <!--<p>Абзац, поменяется.</p>-->
+    <!--<p>Абзац, поменяется.</p>-->
+
+    <script>
+        // 1. У вас есть форма с кнопкой и элемент параграф (тег p)…Нажав на кнопку у вас в
+        // параграфе появляется какая то картинка
+
+        // function addPicture() {
+        //     var p = document.getElementById('par');
+        //     p.innerHTML = '<img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&h=350">';
+        // }
+
+    </script>
+
+    <script>
+        // 2. У вас есть форма с двумя элементами ввода текста, кнопка и два тега p….Нажав
+        // на кнопку, у вас в один параграф заноситься текст , который которые ввели из
+        // одного элемента и в другой параграф заноситься информация из другого
+        // элемента ввода
+
+        // function putText(form) {
+        //
+        //     var pars = document.getElementsByTagName('p');
+        //
+        //     if (form.firstInput.value) {
+        //         pars[0].innerHTML = form.firstInput.value;
+        //     }
+        //
+        //     if (form.firstInput.value) {
+        //         pars[1].innerHTML = form.secondInput.value;
+        //     }
+        // }
+    </script>
+    <script>
+        // 3.Дан HTML код (см. под задачей). Поменяйте содержимое абзацев на их порядковый номер в коде.
+        // <h2>Заголовок, не поменяется.</h2>
+        // <p>Абзац, поменяется.</p>
+        // <p>Абзац, поменяется.</p>
+        // <p>Абзац, поменяется.</p>
+
+        // var pars = document.getElementsByTagName('p');
+        // for (var i = 0, len = pars.length; i < pars.length; i += 1) {
+        //     pars[i].innerHTML = i;
+        // }
+
+    </script>
+
+</body>
+</html>
