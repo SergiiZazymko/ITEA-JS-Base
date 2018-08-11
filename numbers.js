@@ -79,10 +79,10 @@ function convert(n) {
     n = n.split('').reverse();
 
     for (var i = 0, len = n.length; i < len; i += 1) {
-        result.push(keys[i][n[i]]);
+        result.unshift(keys[i][n[i]]);
     }
 
-    return result.reverse().join('');
+    return result.join('');
 }
 
 /**
