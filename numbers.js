@@ -18,8 +18,6 @@ function main(n) {
         return false;
     }
 
-    console.log(isCorrectNumber(n));
-
     n = parseInt(n).toString();
 
     h.innerHTML = convert(n);
@@ -46,6 +44,7 @@ function convert(n) {
             '9' : 'IX',
         },
         {
+            '0' : '',
             '1' : 'X',
             '2' : 'XX',
             '3' : 'XXX',
@@ -57,6 +56,7 @@ function convert(n) {
             '9' : 'XC',
         },
         {
+            '0' : '',
             '1' : 'C',
             '2' : 'CC',
             '3' : 'CCC',
@@ -68,6 +68,7 @@ function convert(n) {
             '9' : 'CM',
         },
         {
+            '0' : '',
             '1' : 'M',
             '2' : 'MM',
             '3' : 'MMM',
