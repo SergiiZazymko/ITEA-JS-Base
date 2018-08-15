@@ -32,11 +32,12 @@
     //     • "programmer" — 2000;
     //     • для остальных значений — 1000.
     // После выполнения функции — вывести информацию о сотрудниках.
+
     var employeesList = [
         {
             'name' : 'John',
-            'sName' : 'Johnson',
-            'age' : '26',
+            'sName' : 'Cohnson',
+            'age' : '89',
             'occupation' : 'director',
             'show' : function () {
                 for (let key in this) {
@@ -50,7 +51,7 @@
         },
         {
             'name' : 'Mike',
-            'sName' : 'Johnson',
+            'sName' : 'Bohnson',
             'age' : '26',
             'occupation' : 'manager',
             'show' : function () {
@@ -66,7 +67,7 @@
         {
             'name' : 'Ford',
             'sName' : 'Johnson',
-            'age' : '26',
+            'age' : '18',
             'occupation' : 'worker',
             'show' : function () {
                 for (let key in this) {
@@ -117,8 +118,41 @@
     //     Параметр для сортировки принимается от пользователя.
     //     После выполнения функции — вывести информацию о сотрудниках.
 
-    function
+    var sorter = {
+        'properties' : {
+            'name' : true,
+            'sName' : true,
+            'age' : true,
+            'occupation' : true,
+            'salary' : true,
+        },
+        /**
+         *
+         * @param array
+         * @param param
+         * @returns {*}
+         */
+        'sort' : function (array, param) {
+            if (param in this.properties) {
+                return array.sort(function (a, b) {
+                    if (a[param] < b[param]) {
+                        return - 1;
+                    }
+                    if (a[param] > b[param]) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            }
+            return false;
+        }
+    };
 
-
-
+    if (sortedArray = sorter.sort(employeesList, prompt('Enter property for sorting'))) {
+        for (let len = sortedArray.length, i = 0; i < len; i += 1) {
+            sortedArray[i].show();
+        }
+    } else {
+        document.write('Not correct input');
+    }
 </script>
