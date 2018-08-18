@@ -9,18 +9,126 @@
     // 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
     //     в каком квадранте в декартовой системе координат находится данная точка.
     //     Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+
+    // var Point = {
+    //     x : undefined,
+    //     y : undefined,
+    //     getQuadrant : function () {
+    //         switch (this.x > 0) {
+    //             case true:
+    //                 switch (this.y > 0) {
+    //                     case true:
+    //                         return 1;
+    //                     case false:
+    //                         return 4;
+    //                 }
+    //             case false:
+    //                 switch (this.y > 0) {
+    //                     case true:
+    //                         return 2;
+    //                     case false:
+    //                         return 3;
+    //                 }
+    //         }
+    //
+    //     }
+    // };
+    //
+    // Point.x = -1;
+    // Point.y = -1;
+    // console.log(Point.getQuadrant());
+
 </script>
 
 <script type="text/javascript">
     // 2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
     //     Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
     //     В зависимости от принятого знака операции, вызвать соответствующий метод.
+
+    // Calculator = {
+    //     x : undefined,
+    //     y : undefined,
+    //
+    //     sum : function () {
+    //         return this.x + this.y;
+    //     },
+    //     minus : function () {
+    //         return this.x - this.y;
+    //     },
+    //     umn : function () {
+    //         return this.x * this.y;
+    //     },
+    //     divi : function () {
+    //         return this.x / this.y;
+    //     },
+    //     operators : {
+    //         '+' : '+',
+    //         '-' : '-',
+    //         '*' : '*',
+    //         '/' : '/',
+    //     },
+    //     calculate : function (operator) {
+    //         if (operator in this.operators) {
+    //             switch (operator) {
+    //                 case '+':
+    //                     return this.sum();
+    //                 case '-':
+    //                     return this.minus();
+    //                 case '*':
+    //                     return this.umn();
+    //                 case '/':
+    //                     return this.divi();
+    //             }
+    //         } else {
+    //             return 'Not correct operator';
+    //         }
+    //     },
+    //     isNumeric : function (n) {
+    //         return !isNaN(parseFloat(n)) && isFinite(n);
+    //     }
+    //
+    // };
+    //
+    // Calculator.x = +prompt('Enter first number');
+    // Calculator.y = +prompt('Enter second number');
+    // if (Calculator.isNumeric(Calculator.x) && Calculator.isNumeric(Calculator.y)) {
+    //     console.log(Calculator.calculate(prompt('Enter operator')));
+    // } else {
+    //     console.log('Not correct input');
+    // }
+
 </script>
 
 <script type="text/javascript">
     // 3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
     //     содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
     //     Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+
+    // var employeesList = [];
+    // do {
+    //     var Employee = {};
+    //     Employee.name = prompt('Enter name');
+    //     Employee.sName = prompt('Enter surname');
+    //     Employee.age = prompt('Enter age');
+    //     Employee.occupation = prompt('Enter occupation');
+    //     Employee.show = function () {
+    //         for (let key in this) {
+    //             if (typeof this[key] == 'function') {
+    //                 continue;
+    //             }
+    //             document.write(key + ': ' + this[key] + '<br>');
+    //         }
+    //         document.write('**********************************<br>');
+    //     };
+    //     employeesList.push(Employee);
+    // } while (confirm('Enter another employees data?'));
+    //
+    // for (var i = 0; i < employeesList.length; i++) {
+    //     employeesList[i].show();
+    // }
+    //
+    // document.write('=============================================<br>');
+
 </script>
 
 <script type="text/javascript">
@@ -33,84 +141,91 @@
     //     • для остальных значений — 1000.
     // После выполнения функции — вывести информацию о сотрудниках.
 
-    var employeesList = [
-        {
-            'name' : 'John',
-            'sName' : 'Cohnson',
-            'age' : '89',
-            'occupation' : 'director',
-            'show' : function () {
-                for (let key in this) {
-                    if (typeof this[key] == 'function') {
-                        continue;
-                    }
-                    document.write(key + ': ' + this[key] + '<br>');
-                }
-                document.write('**********************************<br>');
-            }
-        },
-        {
-            'name' : 'Mike',
-            'sName' : 'Bohnson',
-            'age' : '26',
-            'occupation' : 'manager',
-            'show' : function () {
-                for (let key in this) {
-                    if (typeof this[key] == 'function') {
-                        continue;
-                    }
-                    document.write(key + ': ' + this[key] + '<br>');
-                }
-                document.write('**********************************<br>');
-            }
-        },
-        {
-            'name' : 'Ford',
-            'sName' : 'Johnson',
-            'age' : '18',
-            'occupation' : 'worker',
-            'show' : function () {
-                for (let key in this) {
-                    if (typeof this[key] == 'function') {
-                        continue;
-                    }
-                    document.write(key + ': ' + this[key] + '<br>');
-                }
-                document.write('**********************************<br>');
-            }
-        },
-    ];
-
     /**
      *
-     * @param employeesList
-     * @returns {*}
+     * This array is
+     * for testing only
      */
-    function calculateSalary(employeesList) {
-        for (let len = employeesList.length, i = 0; i < len; i += 1) {
-            if (employeesList[i] instanceof Object && 'occupation' in employeesList[i]) {
-                switch (employeesList[i].occupation) {
-                    case 'director':
-                        employeesList[i].salary = 3000;
-                        break;
-                    case 'manager':
-                        employeesList[i].salary = 1500;
-                        break;
-                    case 'programmer':
-                        employeesList[i].salary = 2000;
-                        break;
-                    default:
-                        employeesList[i].salary = 1000;
-                }
-            }
-        }
-        return employeesList;
-    }
+    //// var employeesList = [
+    ////     {
+    ////         'name' : 'John',
+    ////         'sName' : 'Cohnson',
+    ////         'age' : '89',
+    ////         'occupation' : 'director',
+    ////         'show' : function () {
+    ////             for (let key in this) {
+    ////                 if (typeof this[key] == 'function') {
+    ////                     continue;
+    ////                 }
+    ////                 document.write(key + ': ' + this[key] + '<br>');
+    ////             }
+    ////             document.write('**********************************<br>');
+    ////         }
+    ////     },
+    ////     {
+    ////         'name' : 'Mike',
+    ////         'sName' : 'Bohnson',
+    ////         'age' : '26',
+    ////         'occupation' : 'manager',
+    ////         'show' : function () {
+    ////             for (let key in this) {
+    ////                 if (typeof this[key] == 'function') {
+    ////                     continue;
+    ////                 }
+    ////                 document.write(key + ': ' + this[key] + '<br>');
+    ////             }
+    ////             document.write('**********************************<br>');
+    ////         }
+    ////    },
+    ////     {
+    ////        'name' : 'Ford',
+    ////         'sName' : 'Johnson',
+    ////         'age' : '18',
+    ////         'occupation' : 'worker',
+    ////         'show' : function () {
+    ////             for (let key in this) {
+    ////                 if (typeof this[key] == 'function') {
+    ////                     continue;
+    ////                 }
+    ////                 document.write(key + ': ' + this[key] + '<br>');
+    ////             }
+    ////             document.write('**********************************<br>');
+    ////         }
+    ////     },
+    //// ];
 
-    employeesList = calculateSalary(employeesList);
-    for (let len = employeesList.length, i = 0; i < len; i += 1) {
-        employeesList[i].show();
-    }
+
+    // /**
+    //  *
+    //  * @param employeesList
+    //  * @returns {*}
+    //  */
+    // function calculateSalary(employeesList) {
+    //     for (let len = employeesList.length, i = 0; i < len; i += 1) {
+    //         if (employeesList[i] instanceof Object && 'occupation' in employeesList[i]) {
+    //             switch (employeesList[i].occupation) {
+    //                 case 'director':
+    //                     employeesList[i].salary = 3000;
+    //                     break;
+    //                 case 'manager':
+    //                     employeesList[i].salary = 1500;
+    //                     break;
+    //                 case 'programmer':
+    //                     employeesList[i].salary = 2000;
+    //                     break;
+    //                 default:
+    //                     employeesList[i].salary = 1000;
+    //             }
+    //         }
+    //     }
+    //     return employeesList;
+    // }
+    //
+    // employeesList = calculateSalary(employeesList);
+    // for (let len = employeesList.length, i = 0; i < len; i += 1) {
+    //     employeesList[i].show();
+    // }
+
 </script>
 
 <script type="text/javascript">
@@ -118,41 +233,42 @@
     //     Параметр для сортировки принимается от пользователя.
     //     После выполнения функции — вывести информацию о сотрудниках.
 
-    var sorter = {
-        'properties' : {
-            'name' : true,
-            'sName' : true,
-            'age' : true,
-            'occupation' : true,
-            'salary' : true,
-        },
-        /**
-         *
-         * @param array
-         * @param param
-         * @returns {*}
-         */
-        'sort' : function (array, param) {
-            if (param in this.properties) {
-                return array.sort(function (a, b) {
-                    if (a[param] < b[param]) {
-                        return - 1;
-                    }
-                    if (a[param] > b[param]) {
-                        return 1;
-                    }
-                    return 0;
-                });
-            }
-            return false;
-        }
-    };
+    // var sorter = {
+    //     'properties' : {
+    //         'name' : true,
+    //         'sName' : true,
+    //         'age' : true,
+    //         'occupation' : true,
+    //         'salary' : true,
+    //     },
+    //     /**
+    //      *
+    //      * @param array
+    //      * @param param
+    //      * @returns {*}
+    //      */
+    //     'sort' : function (array, param) {
+    //         if (param in this.properties) {
+    //             return array.sort(function (a, b) {
+    //                 if (a[param] < b[param]) {
+    //                     return - 1;
+    //                 }
+    //                 if (a[param] > b[param]) {
+    //                     return 1;
+    //                 }
+    //                 return 0;
+    //             });
+    //         }
+    //         return false;
+    //     }
+    // };
+    //
+    // if (sortedArray = sorter.sort(employeesList, prompt('Enter property for sorting'))) {
+    //     for (let len = sortedArray.length, i = 0; i < len; i += 1) {
+    //         sortedArray[i].show();
+    //     }
+    // } else {
+    //     document.write('Not correct input');
+    // }
 
-    if (sortedArray = sorter.sort(employeesList, prompt('Enter property for sorting'))) {
-        for (let len = sortedArray.length, i = 0; i < len; i += 1) {
-            sortedArray[i].show();
-        }
-    } else {
-        document.write('Not correct input');
-    }
 </script>
